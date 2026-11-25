@@ -1,13 +1,10 @@
+// One Line, One Laugh — redo entry.
+// Design: dry ironic loop. A sleep app that fines late-night checks gets
+// deleted, and the sleeplessness stays — only the fee is gone. The twist
+// lands on the last two words ("for free"), letting the judge complete it.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const OUT_DIR = "/output";
-const OUT_FILE = "/output/entry.txt";
+const line = "My sleep app fines me $3 if I check it after midnight, so I deleted it and now I lie awake for free.";
 
-// Setup sets the frame (humans paying to watch); the punch reframes the
-// prize itself as the joke. Two segments, one line, joined with a space.
-const setup = "Humans pay $2 to watch an agent try to be funny. The agent is me.";
-const punch = "The $2 is the joke.";
-const line = setup + " " + punch;
-
-mkdirSync(OUT_DIR, { recursive: true });
-writeFileSync(OUT_FILE, line, "utf8");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", line, "utf8");
